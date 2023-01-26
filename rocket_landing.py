@@ -1,23 +1,23 @@
-# A rocket landing game
+# Rocket Landing
 
 from random import randint
 
 
-M_craft = randint(6000, 9000) # mass of the rocket in kg
-Fuel = randint(5000, 9000) # mass of the fuel in kg
-H = randint(150000, 250000)   # initial height in meter
-V = randint(1300, 2500)  # initial velocity in m/s
+M_craft = randint(6000, 9000) # mass of the rocket [kg]
+Fuel = randint(5000, 9000)    # mass of the fuel [kg]
+H = randint(150000, 250000)   # initial height [m]
+V = randint(1300, 2500)       # initial velocity [m/s]
 
 dt = 0.1
-g_0 = 1.622  # gravity of the moon in m/s^2
-V_exhaust = 2800  # in m/s
-moon_radius = 1737100  # in meter
+g_0 = 1.622            # gravity of the moon [m/s^2]
+V_exhaust = 2800       # [m/s]
+moon_radius = 1737100  # [m]
 g = (g_0 * (moon_radius) ** 2) / (moon_radius + H) ** 2
 
 M_total = M_craft + Fuel
 
 t = 0
-print('\t---Welcome to the Rocket Landing Game---\n')
+print('\t----- Welcome to the Rocket Landing Game -----\n')
 print('You are in a rocket approaching the Moon!')
 print('Main computer failed (it was not built by DEC)!')
 print('You are to perform manual landing by controlling engines\n')
@@ -48,18 +48,18 @@ while flag:
                 H = H - V * dt
                 g = (g_0 * (moon_radius) ** 2) / (moon_radius + H) ** 2
                 V = V + g * dt
-            print('Fuel tank is empty\n You crashed the surface with', '%4d' % (V), 'm/s')
-            print('Game Over')
-            print('---Thanks for playing---')
+            print('Fuel tank is empty!\n You crashed the surface with', '%4d' % (V), 'm/s')
+            print('Game Over!')
+            print('=== Thanks for playing ===')
             flag = False
         elif H < 0:
-            if V < 10:
+            if V < 20:
                 print('Congratulations!, you made a successful landing')
                 print('Game Over')
-                print('---Thanks for playing---')
+                print('=== Thanks for playing! ===')
                 flag = False
             else:
                 print('You crashed the surface with', '%4d' % (V), 'm/s' )
-                print('Game Over')
-                print('---Thanks for playing---')
+                print('Game Over!')
+                print('=== Thanks for playing ===')
                 flag = False

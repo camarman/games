@@ -1,4 +1,4 @@
-# Hangman Game With & Without Hints
+# Hangman With & Without Hints
 
 from random import choice
 from string import ascii_lowercase, ascii_letters

@@ -1,5 +1,5 @@
 # https://en.wikipedia.org/wiki/Chaos_game
-# Creating a Chaos game machine for equilateral triangle, square and equilateral pentagon
+# Chaos Game for equilateral triangle, square and equilateral pentagon
 
 from random import randint
 from turtle import *

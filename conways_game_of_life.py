@@ -1,4 +1,4 @@
-# A simpler form of the Conway's Game of Life
+# A simpler version of the Conway's Game of Life
 # https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
 from copy import deepcopy
@@ -11,7 +11,7 @@ from copy import deepcopy
 initial_data = "XXX--X-,--XX-X-,-X-XX--,-X-X-XX,XX-XX-X"
 
 # you can select number of turns from here
-number_of_turn = 5
+number_of_turn = 10
 
 # each row elements from the initial data
 initial_config = initial_data.split(",")
